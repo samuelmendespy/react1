@@ -1,4 +1,4 @@
-function Pessoa() {
+function Pessoa(props) {
     return <div>
         <img src={props.foto} alt="Legenda da imagem"/>
         <h2> Nome: {props.nome}</h2>
