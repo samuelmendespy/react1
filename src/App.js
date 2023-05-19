@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-
+import HelloWorld from './components/HelloWorld';
 function App() {
   const codename= 'Alphabet'
 
@@ -20,6 +19,7 @@ function App() {
       <p>Projeto entitulado de {newCodename}</p>
       <p>Versão : 2023a{sum(0,1)}</p>
       <img src={url} alt="Imagem gerada"/>
+      <HelloWorld />
     </div>
   );
 }
