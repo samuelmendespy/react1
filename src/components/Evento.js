@@ -1,8 +1,13 @@
-function Evento() {
+function Evento({numero}) {
+
+    function meuEvento() {
+        console.log(`Hello ${numero}`)
+    }
+
     return (
         <div>
-            <p>Clique para ativar o evento</p>
-            <button onClick={meuEvento}>Enable</button>
+            <p>Clique para confirmar {numero}:</p>
+            <button onClick={meuEvento}>Confirmar</button>
         </div>
     )
 }
