@@ -1,15 +1,19 @@
 import './App.css';
-import HelloWorld from './components/HelloWorld';
 import SayMyName from './components/SayMyName';
 import Pessoa from './components/Pessoa';
+import Frase from './components/Frase';
+import List from './components/List';
+
 
 
 function App() {
-
   const nome = "Corporation"
+
   return (
     <div className="App">
-      <HelloWorld />
+      <h1>Testando CSS</h1>
+      <Frase/>
+      <Frase/>
       <SayMyName nome="Alphabet" />
       <SayMyName nome="ACME" />
       <SayMyName nome={nome} />
@@ -19,7 +23,7 @@ function App() {
       profissao="Programador" 
       foto="https://picsum.photos/150"
       />
-
+      <List/>
     </div>
   );
 }
