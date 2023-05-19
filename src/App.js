@@ -9,8 +9,6 @@ function App() {
     <div className="App">
       <h1>Eventos</h1> 
       <Evento numero="1" />
-      <Evento numero="2" />
-      <Evento numero="3" />
       <Form />
     </div>
   );
