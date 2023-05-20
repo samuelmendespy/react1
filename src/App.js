@@ -1,16 +1,20 @@
+import { useState } from 'react'
+
 import './App.css';
-import ListDtype from './components/ListDtype';
+import GivenName from './components/GivenName';
+import Saudacao from './components/Saudacao.js';
+
 
 
 function App() {
 
-  const meusItens = ['React', 'Vue', 'Angular']
+  const [nome, setNome] = useState()
 
   return (
     <div className="App">
-      <h1>Renderização de Listas (Data Type)</h1>
-    <ListDtype itens={meusItens}/>     
-    <ListDtype itens={[]}/>      
+      <h1>Atualização com State Lift</h1>
+      <GivenName setNome={setNome} />
+      <Saudacao nome = {nome} />
     </div>
   );
 }
