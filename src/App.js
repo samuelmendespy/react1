@@ -1,22 +1,28 @@
-import { useState } from 'react'
-
-import './App.css';
-import GivenName from './components/GivenName';
-import Saudacao from './components/Saudacao.js';
-
-
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Navbar from './components/layout/Navbar'
+import Footer from './components/layout/Footer'
+import Contact from './components/pages/Contact'
+import About from './components/pages/About'
+import Home from './components/pages/Home'
 
 function App() {
-
-  const [nome, setNome] = useState()
-
   return (
-    <div className="App">
-      <h1>Atualização com State Lift</h1>
-      <GivenName setNome={setNome} />
-      <Saudacao nome = {nome} />
-    </div>
-  );
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/About">
+          <About />
+        </Route>
+        <Route path="/Contact">
+          <Contact />
+        </Route>
+      </Switch>
+      <Footer />
+    </Router>
+  )
 }
 
-export default App;
+export default App
